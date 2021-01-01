@@ -57,7 +57,7 @@ INSERT INTO Customer VALUES (4, '추신수', '미국 클리블랜드', '000-8000
 INSERT INTO Customer VALUES (5, '박세리', '대한민국 대전',  NULL);
 
 INSERT INTO Orders VALUES (1, 1, 1, 6000, STR_TO_DATE('2014-07-01','%Y-%m-%d')); 
-INSERT INTO Orders VALUES (2, 1, 3, 21000, STR_TO_DATE('2014-07-03','%Y-%m-%d'));
+INSERT INTOOrders  VALUES (2, 1, 3, 21000, STR_TO_DATE('2014-07-03','%Y-%m-%d'));
 INSERT INTO Orders VALUES (3, 2, 5, 8000, STR_TO_DATE('2014-07-03','%Y-%m-%d')); 
 INSERT INTO Orders VALUES (4, 3, 6, 6000, STR_TO_DATE('2014-07-04','%Y-%m-%d')); 
 INSERT INTO Orders VALUES (5, 4, 7, 20000, STR_TO_DATE('2014-07-05','%Y-%m-%d'));
@@ -68,7 +68,7 @@ INSERT INTO Orders VALUES (9, 2, 10, 7000, STR_TO_DATE('2014-07-09','%Y-%m-%d'))
 INSERT INTO Orders VALUES (10, 3, 8, 13000, STR_TO_DATE('2014-07-10','%Y-%m-%d'));
 
 -- 여기는 3장에서 사용되는 Imported_book 테이블
-CREATE TABLE Imported_Book (
+CREATE TABLE Imported_Book(Orders
   bookid      INTEGER,
   bookname    VARCHAR(40),
   publisher   VARCHAR(40),
@@ -272,4 +272,4 @@ select * from Book where publisher='대한미디어' and price >=30000;
 
 alter table Book;
 
-drop index ix_Book on Bppk;
+drop index ix_Book on Book;
