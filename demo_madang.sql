@@ -5,7 +5,7 @@
 /* MySQL Workbench에서 초기화면에서 +를 눌러 root connection을 만들어 접속한다. */
 DROP DATABASE IF EXISTS  madang;
 DROP USER IF EXISTS  madang@localhost;
-create user madang@localhost identified WITH mysql_native_password  by 'madang1234';
+create user madang@localhost identified WITH mysql_native_password  by 'madang1234!!';
 create database madang;
 grant all privileges on madang.* to madang@localhost with grant option;
 commit;
