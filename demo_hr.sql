@@ -2690,3 +2690,17 @@ ALTER TABLE departments ADD FOREIGN KEY (manager_id) REFERENCES employees (emplo
 ALTER TABLE job_history ADD FOREIGN KEY (employee_id) REFERENCES employees(employee_id);
 ALTER TABLE job_history ADD FOREIGN KEY (job_id) REFERENCES jobs(job_id);
 ALTER TABLE job_history ADD FOREIGN KEY (department_id) REFERENCES departments(department_id);
+
+
+SELECT employee_id, concat(first_name, ' ', last_name) as "Name",
+salary, job_id, hire_date, manager_id
+FROM employees;
+
+SELECT concat(first_name, ' ', last_name) as "Name", job_id as "Job", salary as "Salary",
+12*salary+100 as "Increased Ann_salary", 12*(salary+100) as "Increased
+Salary"
+FROM employees;
+
+SELECT concat(last_name, ': 1 Year Salary = $', salary*12) as "1 Year Salary"
+FROM employees;
+
